@@ -4,6 +4,8 @@ import com.zzkun.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
@@ -20,12 +22,11 @@ public class UserDao {
 
     public User add(User user) {
         String sql = "INSERT INTO `user` (`username`, `password`, `power`) VALUES (?, ?, ?)";
-        int res = jdbc.update(sql, user.getUsername(), user.getPassword(), user.getPower());
-        if(res == 0) return null;
-        return findByUsername(user.getUsername());
+        jdbc.update(sql, user.getUsername(), user.getPassword(), user.getPower());
+        return queryByUsername(user.getUsername());
     }
 
-    public User findByUsername(String username) {
+    public User queryByUsername(String username) {
         String sql = "select id, username, password, power from user where username=?";
         User user = new User();
         jdbc.query(sql, new Object[]{username}, new RowCallbackHandler() {

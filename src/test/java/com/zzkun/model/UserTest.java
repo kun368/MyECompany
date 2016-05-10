@@ -23,7 +23,7 @@ public class UserTest {
     @Test
     public void test1() throws Exception {
         User user = new User();
-        user.setUsername("heheda");
+        user.setUsername("fjdklsja");
         user.setPassword("1234fds");
         user.setPower(1);
         System.out.println(userDao.add(user));
