@@ -15,20 +15,28 @@
 </head>
 <body>
 
-<a href="<c:url value="/news/add"/>">添加新闻</a>
+<div class="am-container">
+    <ol class="am-breadcrumb">
+        <li><a href="${url_index}">首页</a></li>
+        <li class="am-active">新闻列表</li>
+    </ol>
 
-<table class="am-table am-table-bordered am-table-radius am-table-striped">
-    <tr>
-        <th>发布时间</th>
-        <th>标题</th>
-    </tr>
-    <c:forEach items="${newslist}" var="news">
+    <a href="<c:url value="/news/add"/>">添加新闻</a>
+
+    <table class="am-table am-table-bordered am-table-radius am-table-striped">
         <tr>
-            <td><fmt:formatDate value="${news.addtime}" type="date" pattern="yyyy年MM月dd日"/></td>
-            <td><a href="<c:url value="/news/detail/${news.id}"/>">${news.title}</a></td>
+            <th>发布时间</th>
+            <th>标题</th>
         </tr>
-    </c:forEach>
-</table>
+        <c:forEach items="${newslist}" var="news">
+            <tr>
+                <td><fmt:formatDate value="${news.addtime}" type="date" pattern="yyyy年MM月dd日"/></td>
+                <td><a href="<c:url value="/news/detail/${news.id}"/>">${news.title}</a></td>
+            </tr>
+        </c:forEach>
+    </table>
+</div>
+<%@ include file="../CommonFooter.jsp"%>
 
 </body>
 </html>

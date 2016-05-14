@@ -15,26 +15,35 @@
 </head>
 <body>
 
-<h1>所有产品</h1>
 
-<table class="am-table am-table-bordered am-table-radius am-table-striped">
-    <tr>
-        <th>产品名称</th>
-        <th>价格</th>
-        <th>活动</th>
-        <th>商品产地</th>
-        <th>上架日期</th>
-    </tr>
-    <c:forEach items="${products}" var="product">
+<div class="am-container">
+
+    <ol class="am-breadcrumb">
+        <li><a href="${url_index}">首页</a></li>
+        <li class="am-active">产品列表</li>
+    </ol>
+
+    <table class="am-table am-table-bordered am-table-radius am-table-striped">
         <tr>
-            <td><a href="<c:url value="/product/detail/${product.id}"/>">${product.name}</a></td>
-            <td>${product.price}</td>
-            <td>${product.activity}</td>
-            <td>${product.address}</td>
-            <td><fmt:formatDate value="${product.addtime}" type="date" pattern="yyyy年MM月dd日"/></td>
+            <th>产品名称</th>
+            <th>价格</th>
+            <th>活动</th>
+            <th>商品产地</th>
+            <th>上架日期</th>
         </tr>
-    </c:forEach>
-</table>
+        <c:forEach items="${products}" var="product">
+            <tr>
+                <td><a href="<c:url value="/product/detail/${product.id}"/>">${product.name}</a></td>
+                <td>${product.price}</td>
+                <td>${product.activity}</td>
+                <td>${product.address}</td>
+                <td><fmt:formatDate value="${product.addtime}" type="date" pattern="yyyy年MM月dd日"/></td>
+            </tr>
+        </c:forEach>
+    </table>
+</div>
 
+
+<%@ include file="../CommonFooter.jsp"%>
 </body>
 </html>
