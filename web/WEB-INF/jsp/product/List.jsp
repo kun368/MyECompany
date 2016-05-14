@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>产品大全</title>
+    <title>产品大全 - MyECompany</title>
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>

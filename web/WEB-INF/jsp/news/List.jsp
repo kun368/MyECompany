@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>新闻中心</title>
+    <title>新闻中心 - MyECompany</title>
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
@@ -20,8 +20,6 @@
         <li><a href="${url_index}">首页</a></li>
         <li class="am-active">新闻列表</li>
     </ol>
-
-    <a href="<c:url value="/news/add"/>">添加新闻</a>
 
     <table class="am-table am-table-bordered am-table-radius am-table-striped">
         <tr>
@@ -35,6 +33,9 @@
             </tr>
         </c:forEach>
     </table>
+
+    <a class="am-btn am-btn-secondary am-round am-align-right" href="<c:url value="/news/add"/>">添加新闻</a><br/>
+
 </div>
 <%@ include file="../CommonFooter.jsp"%>
 

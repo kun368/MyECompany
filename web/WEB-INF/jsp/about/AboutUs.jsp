@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>关于我们</title>
+    <title>关于我们 - MyECompany</title>
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <li><a href="${url_index}">首页</a></li>
         <li class="am-active">关于我们</li>
     </ol>
-
+    <img src="http://7xl8xs.com1.z0.glb.clouddn.com/16-5-14/67047107.jpg" class="am-img-responsive am-center" alt=""/><br/>
     <div>
         <p>
             EMyCompany是国家信息部首批认定的国家软件企业、青岛市高新技术企业和骨干软件企业，总部位于青岛，在北京、杭州、宁波、济南等地设有分支机构和办事处。同时，EMyCompany以卓越的技术实力，被评为中国电子政务IT100强企业之一,成为国家政府采购中心指定的电子政务供应商。
@@ -39,6 +39,7 @@
             MyECompany成长的过程，就是服务客户并和客户一起不断成功的过程！我们用心、努力作好每一件事，满怀信心迎接每一次挑战。
         </P>
     </div>
+
 </div>
 <%@ include file="../CommonFooter.jsp"%>
 

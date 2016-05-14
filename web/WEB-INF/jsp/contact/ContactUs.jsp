@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>联系我们</title>
+    <title>联系我们 - MyECompany</title>
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
@@ -23,7 +23,7 @@
         <h1>联系我们-留言板</h1>
         <h3>您的建议都是公开的，您可以使用QQ、微博、微信等账号留言。</h3>
         <h3>也可以通过如下方式联系我们：</h3>
-        <h3>Email：myecomplany@zzkun.com</h3>
+        <h3>Email：myecomplany@163.com</h3>
         <h3>地址：山东省青岛市山东科技大学</h3>
     </div>
 

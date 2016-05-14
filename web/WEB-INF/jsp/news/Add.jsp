@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>添加新闻</title>
+    <title>添加新闻 - MyECompany</title>
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
@@ -24,16 +24,18 @@
     <form:form commandName="news" action="${url_save_news}" method="post" cssClass="am-form">
         <div class="am-form-group">
             <form:errors path="title"/><br/>
-            <label for="title">标题</label>
+            <label for="title">新闻标题</label>
             <form:input id="title" path="title"/>
         </div>
         <div class="am-form-group">
             <form:errors path="content"/><br/>
-            <label for="content">标题</label>
+            <label for="content">新闻内容</label>
             <form:textarea path="content" rows="20" id="content"/>
         </div>
-        <p><button type="reset" class="am-btn am-btn-default">重置</button></p>
-        <p><button type="submit" class="am-btn am-btn-default">提交</button></p>
+        <p>
+            <button type="submit" class="am-btn am-btn-primary am-radius am-align-right">提交</button>
+            <button type="reset" class="am-btn am-btn-secondary am-radius am-align-right">重置</button>
+        </p>
     </form:form>
 </div>
 <%@ include file="../CommonFooter.jsp"%>
