@@ -24,13 +24,23 @@
     </ol>
 
     <h1>${product.name}</h1>
-    <h3>价格：${product.price}元</h3>
-    <h3>活动：${product.activity}</h3>
-    <h3>上架时间：${product.addtime}</h3>
-    <h3>商品产地：${product.address}</h3>
+    <div data-am-widget="tabs" class="am-tabs am-tabs-d2">
+        <ul class="am-tabs-nav am-cf">
+            <li class="am-active"><a href="[data-tab-panel-0]">产品价格</a></li>
+            <li class=""><a href="[data-tab-panel-1]">当前活动</a></li>
+            <li class=""><a href="[data-tab-panel-2]">上架时间</a></li>
+            <li class=""><a href="[data-tab-panel-3]">商品产地</a></li>
+        </ul>
+        <div class="am-tabs-bd">
+            <div data-tab-panel-0 class="am-tab-panel am-active">人民币${product.price}元</div>
+            <div data-tab-panel-1 class="am-tab-panel ">${product.activity}</div>
+            <div data-tab-panel-2 class="am-tab-panel ">${product.addtime}</div>
+            <div data-tab-panel-3 class="am-tab-panel ">${product.address}</div>
+        </div>
+    </div>
 
     <c:forEach items="${product.imageurl}" var="image">
-        <img src="${image}" class="am-img-responsive" alt="图片"/>
+        <img src="${image}" class="am-img-responsive am-center" alt="图片"/>
     </c:forEach>
     <p>
         <%request.setAttribute("vEnter", "\n");%>

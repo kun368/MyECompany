@@ -40,6 +40,40 @@
         </P>
     </div>
 
+    <hr data-am-widget="divider" style="" class="am-divider am-divider-dashed" />
+    <h1 class="am-center" style="text-align: center">公司核心成员</h1>
+    <div data-am-widget="tabs" class="am-tabs am-tabs-default">
+        <ul class="am-tabs-nav am-cf">
+            <li class="am-active"><a href="[data-tab-panel-0]">张正锟</a></li>
+            <li class=""><a href="[data-tab-panel-1]">王琦</a></li>
+            <li class=""><a href="[data-tab-panel-2]">李丹</a></li>
+            <li class=""><a href="[data-tab-panel-3]">张幸然</a></li>
+        </ul>
+        <div class="am-tabs-bd">
+            <div data-tab-panel-0 class="am-tab-panel am-active">
+                山东科技大学ACMer<br/>
+                全栈工程师<br/>
+                扣扣：1004788567<br/>
+                电邮：kun@zzkun.com<br/>
+                博客：www.zzkun.com<br/>
+            </div>
+            <div data-tab-panel-1 class="am-tab-panel ">
+                Java/数据库工程师<br/>
+                扣扣：1626118748<br/>
+                电邮：1626118748@qq.com<br/>
+            </div>
+            <div data-tab-panel-2 class="am-tab-panel ">
+                前端UI设计<br/>
+                扣扣：2459344616<br/>
+                电邮：2459344616@qq.com<br/>
+            </div>
+            <div data-tab-panel-3 class="am-tab-panel ">
+                用户体验/测试工程师<br/>
+                扣扣：1309617084<br/>
+                电邮：1309617084@qq.com<br/>
+            </div>
+        </div>
+    </div>
 </div>
 <%@ include file="../CommonFooter.jsp"%>
 
