@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>关于我们</title>
+    <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
 
