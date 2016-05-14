@@ -31,26 +31,30 @@ public class NewsDao {
             news.setTitle(resultSet.getString("title"));
             news.setContent(resultSet.getString("content"));
             news.setUserid(resultSet.getInt("userid"));
-            news.setAddtime(resultSet.getDate("addtime"));
+            news.setAddtime(resultSet.getTimestamp("addtime"));
             return news;
         }
     }
 
-    public List<News> queryAllNews() {
-        String sql = "SELECT * FROM `news`";
+    public List<News> getAllNews() {
+        String sql = "SELECT * FROM `news` ORDER BY id DESC";
         return jdbc.query(sql, new NewsRowMapper());
     }
 
-    public News queryById(int id) {
+    public News getNewsById(int id) {
         String sql = "SELECT * FROM `news` where id = ?";
         List<News> res = jdbc.query(sql, new Object[]{id}, new NewsRowMapper());
         if(res == null || res.isEmpty()) return null;
         return res.get(0);
     }
 
-    public void add(News news) {
-
+    public News getLatestNews() {
+        String sql = "SELECT * FROM `news` ORDER BY id DESC LIMIT 0, 1";
+        return jdbc.queryForObject(sql, new NewsRowMapper());
     }
 
-
+    public void add(News news) {
+        String sql = "INSERT INTO `news` (`title`, `content`, `userid`, `addtime`) VALUES (?, ?, ?, ?)";
+        jdbc.update(sql, news.getTitle(), news.getContent(), news.getUserid(), news.getAddtime());
+    }
 }

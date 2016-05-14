@@ -1,5 +1,6 @@
 package com.zzkun.model;
 
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,8 +11,13 @@ import java.util.Date;
 public class News implements Serializable {
 
     private int id;
+
+    @Size(min = 3, max = 50)
     private String title;
+
+    @Size(min = 3)
     private String content;
+
     private int userid;
     private Date addtime;
 
