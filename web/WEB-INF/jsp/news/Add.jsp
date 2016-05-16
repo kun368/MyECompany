@@ -13,6 +13,7 @@
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
+<%@ include file="CommonTopBar.jsp"%>
 
 <div class="am-container">
     <ol class="am-breadcrumb">
@@ -23,14 +24,14 @@
     <c:url value="/news/save" var="url_save_news"/>
     <form:form commandName="news" action="${url_save_news}" method="post" cssClass="am-form">
         <div class="am-form-group">
-            <form:errors path="title"/><br/>
-            <label for="title">新闻标题</label>
-            <form:input id="title" path="title"/>
+            <label for="title" class="am-form-label">新闻标题</label>
+            <form:errors path="title" cssClass="am-text-warning"/><br/>
+            <form:input id="title" path="title" cssClass="am-form-field"/>
         </div>
         <div class="am-form-group">
-            <form:errors path="content"/><br/>
-            <label for="content">新闻内容</label>
-            <form:textarea path="content" rows="20" id="content"/>
+            <label for="content" class="am-form-label">新闻内容</label>
+            <form:errors path="content" cssClass="am-text-warning"/><br/>
+            <form:textarea path="content" rows="20" id="content" cssClass="am-form-field"/>
         </div>
         <p>
             <button type="submit" class="am-btn am-btn-primary am-radius am-align-right">提交</button>

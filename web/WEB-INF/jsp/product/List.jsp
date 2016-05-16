@@ -14,7 +14,7 @@
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
-
+<%@ include file="CommonTopBar.jsp"%>
 
 <div class="am-container">
 
@@ -23,26 +23,27 @@
         <li class="am-active">产品列表</li>
     </ol>
 
-    <table class="am-table am-table-bordered am-table-radius am-table-striped">
-        <tr>
-            <th>产品名称</th>
-            <th>价格</th>
-            <th>活动</th>
-            <th>商品产地</th>
-            <th>上架日期</th>
-        </tr>
-        <c:forEach items="${products}" var="product">
-            <tr>
-                <td><a href="<c:url value="/product/detail/${product.id}"/>">${product.name}</a></td>
-                <td>${product.price}</td>
-                <td>${product.activity}</td>
-                <td>${product.address}</td>
-                <td><fmt:formatDate value="${product.addtime}" type="date" pattern="yyyy年MM月dd日"/></td>
-            </tr>
+    <div class="am-g">
+        <c:forEach items="${products}" var="product" varStatus="status">
+            <c:if test="${status.index % 3 == 0}">
+                <div class="am-u-sm-12"></div>
+            </c:if>
+            <c:url value="/product/detail/${product.id}" var="url_cur"/>
+            <div class="am-u-sm-4 am-u-end">
+                <div class="am-thumbnail">
+                    <img src="${product.imagemain.get(0)}" alt=""/>
+                    <div class="am-thumbnail-caption">
+                        <div class="am-g">
+                            <div class="am-u-sm-8"><h3 class="am-text-truncate"><a href="${url_cur}">${product.name}</a></h3></div>
+                            <div class="am-u-sm-4 am-text-danger"><h3 class="am-align-right">￥${product.price}</h3></div>
+                            <div class="am-u-sm-12"><h6 class="am-text-truncate am-text-sm">${product.activity}</h6></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </c:forEach>
-    </table>
+    </div>
 </div>
-
 
 <%@ include file="../CommonFooter.jsp"%>
 </body>

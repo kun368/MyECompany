@@ -12,6 +12,7 @@
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
+<%@ include file="CommonTopBar.jsp"%>
 
 <div class="am-container">
     <ol class="am-breadcrumb">

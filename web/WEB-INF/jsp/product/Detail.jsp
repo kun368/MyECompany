@@ -15,6 +15,7 @@
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
+<%@ include file="CommonTopBar.jsp"%>
 
 <div class="am-container">
     <ol class="am-breadcrumb">
@@ -24,21 +25,29 @@
     </ol>
 
     <h1>${product.name}</h1>
-    <div data-am-widget="tabs" class="am-tabs am-tabs-d2">
-        <ul class="am-tabs-nav am-cf">
-            <li class="am-active"><a href="[data-tab-panel-0]">产品价格</a></li>
-            <li class=""><a href="[data-tab-panel-1]">当前活动</a></li>
-            <li class=""><a href="[data-tab-panel-2]">上架时间</a></li>
-            <li class=""><a href="[data-tab-panel-3]">商品产地</a></li>
-        </ul>
-        <div class="am-tabs-bd">
-            <div data-tab-panel-0 class="am-tab-panel am-active">人民币${product.price}元</div>
-            <div data-tab-panel-1 class="am-tab-panel ">${product.activity}</div>
-            <div data-tab-panel-2 class="am-tab-panel ">${product.addtime}</div>
-            <div data-tab-panel-3 class="am-tab-panel ">${product.address}</div>
+
+    <div class="am-g">
+        <div class="am-u-sm-3">
+            <div data-am-widget="slider" class="am-slider am-slider-b2" data-am-slider='{&quot;controlNav&quot;:false}'  id="demo-slider-0">
+                <ul class="am-slides">
+                    <c:forEach items="${product.imagemain}" var="image">
+                        <li><img src="${image}"></li>
+                    </c:forEach>
+                </ul>
+            </div>
+        </div>
+        <div class="am-u-sm-9">
+            <ul class="am-list am-list-static am-list-border">
+                <li><i class="am-icon-rmb am-icon-fw"></i>产品价格：${product.price}</li>
+                <li><i class="am-icon-bullhorn am-icon-fw"></i>当前活动：${product.activity}</li>
+                <li><i class="am-icon-star am-icon-fw"></i>上架时间：${product.addtime}</li>
+                <li><i class="am-icon-check-square am-icon-fw"></i>商品产地：${product.address}</li>
+            </ul>
         </div>
     </div>
 
+    <%--下面为商品详情--%>
+    <hr data-am-widget="divider" style="" class="am-divider am-divider-dashed" />
     <c:forEach items="${product.imageurl}" var="image">
         <img src="${image}" class="am-img-responsive am-center" alt="图片"/>
     </c:forEach>

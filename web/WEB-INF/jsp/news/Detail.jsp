@@ -15,6 +15,7 @@
     <%@ include file="../CommonTop.jsp"%>
 </head>
 <body>
+<%@ include file="CommonTopBar.jsp"%>
 
 <div class="am-container">
 
@@ -24,14 +25,18 @@
         <li class="am-active">新闻详情</li>
     </ol>
 
-    <h1>${news.title}</h1>
-    <h3>新闻时间：${news.addtime}</h3>
-    <p>
-        <%request.setAttribute("vEnter", "\n");%>
-        ${fn:replace(news.content, vEnter, "<br/><br/>")}
-    </p>
-
-    <hr/>
+    <article class="am-article">
+        <div class="am-article-hd">
+            <h1 class="am-article-title">${news.title}</h1>
+            <p class="am-article-meta">新闻发布时间：${news.addtime}</p>
+        </div>
+        <div class="am-article-bd">
+            <p class="am-article-lead">
+                <%request.setAttribute("vEnter", "\n");%>
+                ${fn:replace(news.content, vEnter, "<br/><br/>")}
+            </p>
+        </div>
+    </article>
 
     <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="${news.id}" data-title="${news.title}" data-url="<%=request.getRequestURL()%>"></div>

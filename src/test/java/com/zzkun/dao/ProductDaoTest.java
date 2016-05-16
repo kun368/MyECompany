@@ -28,9 +28,4 @@ public class ProductDaoTest {
         logger.info("geekun, getAllProduct...");
         System.out.println(productDao.getAllProduct());
     }
-
-    @Test
-    public void getImageUrlList() throws Exception {
-        System.out.println(productDao.getImageUrlList(1));
-    }
 }

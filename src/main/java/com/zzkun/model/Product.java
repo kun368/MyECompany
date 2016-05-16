@@ -18,9 +18,11 @@ public class Product implements Serializable {
     private String address;
     private String activity;
     private List<String> imageurl;
+    private List<String> imagemain;
 
     public Product() {
         imageurl = new ArrayList<>();
+        imagemain = new ArrayList<>();
     }
 
     public int getId() {
@@ -79,16 +81,20 @@ public class Product implements Serializable {
         this.activity = activity;
     }
 
-    public void addImageUrl(String url) {
-        imageurl.add(url);
-    }
-
     public void setImageurl(List<String> imageurl) {
         this.imageurl = imageurl;
     }
 
     public List<String> getImageurl() {
         return imageurl;
+    }
+
+    public void setImagemain(List<String> imagemain) {
+        this.imagemain = imagemain;
+    }
+
+    public List<String> getImagemain() {
+        return imagemain;
     }
 
     @Override
@@ -102,6 +108,7 @@ public class Product implements Serializable {
                 ", address='" + address + '\'' +
                 ", activity='" + activity + '\'' +
                 ", imageurl=" + imageurl +
+                ", imagemain=" + imagemain +
                 '}';
     }
 }
