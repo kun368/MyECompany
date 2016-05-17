@@ -1,7 +1,9 @@
 package com.zzkun.service;
 
 import com.zzkun.dao.NewsDao;
+import com.zzkun.dao.PageInfo;
 import com.zzkun.model.News;
+import com.zzkun.util.MyPaging;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,14 +19,17 @@ public class NewsService {
     @Autowired
     private NewsDao newsDao;
 
+    private MyPaging<News> myPaging = null;
+    private boolean newsChanged = false;
+
     public List<News> getAllNews() {
         return newsDao.getAllNews();
     }
 
     public void saveNews(News news) {
         news.setAddtime(new Date());
-        System.out.println(news);
         newsDao.add(news);
+        newsChanged = true;
     }
 
     public int getLatestNewsId() {
@@ -35,5 +40,13 @@ public class NewsService {
 
     public News getNews(int id) {
         return newsDao.getNewsById(id);
+    }
+
+    public PageInfo<News> getPage(int id) {
+        if(myPaging == null || newsChanged) {
+            myPaging = new MyPaging<>(getAllNews(), 10);
+            newsChanged = false;
+        }
+        return myPaging.getPage(id);
     }
 }

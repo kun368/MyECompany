@@ -1,7 +1,9 @@
 package com.zzkun.controller;
 
+import com.zzkun.dao.PageInfo;
 import com.zzkun.model.News;
 import com.zzkun.service.NewsService;
+import com.zzkun.util.MyPaging;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -23,9 +25,9 @@ public class NewsController {
     @Autowired
     private NewsService newsService;
 
-    @RequestMapping("/list")
-    public ModelAndView list() {
-        return new ModelAndView("news/List", "newslist", newsService.getAllNews());
+    @RequestMapping("/list/page/{pageid}")
+    public ModelAndView listPage(@PathVariable int pageid) {
+        return new ModelAndView("news/ListPage", "curpage", newsService.getPage(pageid-1));
     }
 
     @RequestMapping("/add")
@@ -36,8 +38,6 @@ public class NewsController {
     @RequestMapping("/save")
     public ModelAndView save(@Valid @ModelAttribute News news, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
-            FieldError fieldError = bindingResult.getFieldError();
-            System.out.println("错误" + fieldError.getField());
             return new ModelAndView("news/Add");
         }
         newsService.saveNews(news);

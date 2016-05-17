@@ -20,7 +20,7 @@
 <div class="am-container">
     <ol class="am-breadcrumb">
         <li><a href="${url_index}">首页</a></li>
-        <li><a href="${url_product_list}">产品</a></li>
+        <li><a href="${url_product_list}">产品列表</a></li>
         <li class="am-active">产品详情</li>
     </ol>
 

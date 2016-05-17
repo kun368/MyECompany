@@ -21,7 +21,7 @@
 
     <ol class="am-breadcrumb">
         <li><a href="${url_index}">首页</a></li>
-        <li><a href="${url_news}">新闻</a></li>
+        <li><a href="${url_news}">新闻列表</a></li>
         <li class="am-active">新闻详情</li>
     </ol>
 

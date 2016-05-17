@@ -15,7 +15,7 @@
 <%@ include file="CommonTopBar.jsp"%>
 
 <div class="am-container">
-    <h1>欢迎来到MyECompay创业网站！</h1>
+    <h1>Coding/UI/Web---欢迎来到MyECompay创业网站！</h1>
 
     <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
         <ul class="am-slides">
