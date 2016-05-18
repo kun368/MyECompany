@@ -24,13 +24,6 @@ public class NewsDaoTest {
 
     @Test
     public void test1() {
-        News news = new News();
-        news.setTitle("年后");
-        news.setContent("内容");
-        news.setUserid(1);
-        news.setAddtime(new Date());
-        newsDao.add(news);
-        System.out.println(newsDao.getLatestNews());
         List<News> list = newsDao.getAllNews();
         System.out.println(list);
     }

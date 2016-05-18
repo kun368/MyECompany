@@ -17,8 +17,6 @@ public class News implements Serializable {
 
     @Size(min = 3)
     private String content;
-
-    private int userid;
     private Date addtime;
 
     public News() {
@@ -48,14 +46,6 @@ public class News implements Serializable {
         this.content = content;
     }
 
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
-
     public Date getAddtime() {
         return addtime;
     }
@@ -70,7 +60,6 @@ public class News implements Serializable {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
-                ", userid='" + userid + '\'' +
                 ", addtime=" + addtime +
                 '}';
     }

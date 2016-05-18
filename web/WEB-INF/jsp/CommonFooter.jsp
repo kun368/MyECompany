@@ -11,3 +11,10 @@
         <p>CopyRight©2016  MyECompany Inc.</p>
     </div>
 </footer>
+
+<c:url value="/assets/js/jquery.min.js" var="url_jquery"/>
+<c:url value="/assets/js/jquery.flexslider-min.js" var="url_flexslider"/>
+<c:url value="/assets/js/amazeui.min.js" var="url_js"/>
+<script src="${url_jquery}"></script>
+<script src="${url_flexslider}"></script>
+<script src="${url_js}"></script>

@@ -25,6 +25,9 @@
     <mvc:annotation-driven/>
     <mvc:resources mapping="/assets/**" location="/assets/"/>
 
+    <bean class="com.zzkun.config.SecurityConfig"/>
+    <bean class="com.zzkun.config.SecurityWebInitializer"/>
+
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>

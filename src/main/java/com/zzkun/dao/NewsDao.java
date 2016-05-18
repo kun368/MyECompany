@@ -30,7 +30,6 @@ public class NewsDao {
             news.setId(resultSet.getInt("id"));
             news.setTitle(resultSet.getString("title"));
             news.setContent(resultSet.getString("content"));
-            news.setUserid(resultSet.getInt("userid"));
             news.setAddtime(resultSet.getTimestamp("addtime"));
             return news;
         }
@@ -54,7 +53,7 @@ public class NewsDao {
     }
 
     public void add(News news) {
-        String sql = "INSERT INTO `news` (`title`, `content`, `userid`, `addtime`) VALUES (?, ?, ?, ?)";
-        jdbc.update(sql, news.getTitle(), news.getContent(), news.getUserid(), news.getAddtime());
+        String sql = "INSERT INTO `news` (`title`, `content`, `addtime`) VALUES (?, ?, ?)";
+        jdbc.update(sql, news.getTitle(), news.getContent(), news.getAddtime());
     }
 }
