@@ -1,12 +1,13 @@
 package com.zzkun.dao;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * 页面信息，定义第0页为第一个
  * Created by kun on 2016/5/17.
  */
-public class PageInfo<T> {
+public class PageInfo<T> implements Serializable {
 
     private List<T> list;
     private boolean isFirstPage;

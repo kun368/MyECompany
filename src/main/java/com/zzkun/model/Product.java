@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * 产品类
  * Created by kun on 2016/5/11.
  */
 public class Product implements Serializable {
@@ -17,8 +18,8 @@ public class Product implements Serializable {
     private Date addtime;
     private String address;
     private String activity;
-    private List<String> imageurl;
-    private List<String> imagemain;
+    private List<String> imageurl; //产品介绍中的图片url
+    private List<String> imagemain; //产品主图片
 
     public Product() {
         imageurl = new ArrayList<>();
