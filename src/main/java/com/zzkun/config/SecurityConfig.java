@@ -7,7 +7,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.annotation.web.servlet.configuration.EnableWebMvcSecurity;
 
 /**
  * Created by Administrator on 2016/5/18.
@@ -22,9 +21,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin().and()
-                .authorizeRequests().regexMatchers(".*add.*").authenticated()
+        http.formLogin().loginPage("/auth/login");
+        http.logout().logoutUrl("/auth/logout");
+        http.authorizeRequests().regexMatchers(".*add.*").authenticated()
+                .regexMatchers(".*admin.*").authenticated()
                 .anyRequest().permitAll();
+        http.rememberMe().key("codekun");
     }
 
     @Override

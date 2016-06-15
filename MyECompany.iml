@@ -45,17 +45,17 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-web:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.2.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-catalina:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-servlet-api:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jsp-api:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-el-api:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-juli:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-annotations-api:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-api:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jni:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-coyote:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-util:8.0.30" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-util-scan:8.0.30" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-catalina:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-servlet-api:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jsp-api:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-el-api:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-juli:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-annotations-api:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-api:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-jni:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-coyote:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-util:8.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat:tomcat-util-scan:8.5.3" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-test:4.2.5.RELEASE" level="project" />

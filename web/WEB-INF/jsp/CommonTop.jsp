@@ -9,5 +9,6 @@
 
 
 <c:url value="/assets/css/amazeui.min.css" var="url_css"/>
+<c:url value="/assets/css/admin.css" var="url_css_admin"/>
 <link rel="stylesheet" type="text/css" href="${url_css}">
 

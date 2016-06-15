@@ -25,4 +25,14 @@ public class MainController {
     public String contactus() {
         return "contact/ContactUs";
     }
+
+    @RequestMapping(value = "/auth/login")
+    public String mylogin() {
+        return "auth/Login";
+    }
+
+    @RequestMapping(value = "/auth/logout")
+    public String mylogout() {
+        return "auth/Logout";
+    }
 }

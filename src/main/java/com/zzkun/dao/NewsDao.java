@@ -42,9 +42,7 @@ public class NewsDao {
 
     public News getNewsById(int id) {
         String sql = "SELECT * FROM `news` where id = ?";
-        List<News> res = jdbc.query(sql, new Object[]{id}, new NewsRowMapper());
-        if(res == null || res.isEmpty()) return null;
-        return res.get(0);
+        return jdbc.queryForObject(sql, new Object[]{id}, new NewsRowMapper());
     }
 
     public News getLatestNews() {

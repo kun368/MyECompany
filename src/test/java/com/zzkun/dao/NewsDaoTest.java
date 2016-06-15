@@ -27,5 +27,4 @@ public class NewsDaoTest {
         List<News> list = newsDao.getAllNews();
         System.out.println(list);
     }
-
 }
