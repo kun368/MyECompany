@@ -1,13 +1,10 @@
 package com.zzkun.controller;
 
-import com.zzkun.dao.PageInfo;
 import com.zzkun.model.News;
 import com.zzkun.service.NewsService;
-import com.zzkun.util.MyPaging;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

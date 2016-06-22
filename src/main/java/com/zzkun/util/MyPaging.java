@@ -1,6 +1,6 @@
 package com.zzkun.util;
 
-import com.zzkun.dao.PageInfo;
+import com.zzkun.model.PageInfo;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

@@ -1,7 +1,7 @@
 package com.zzkun.service;
 
 import com.zzkun.dao.NewsDao;
-import com.zzkun.dao.PageInfo;
+import com.zzkun.model.PageInfo;
 import com.zzkun.model.News;
 import com.zzkun.util.MyPaging;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.zzkun.dao;
+package com.zzkun.model;
 
 import java.io.Serializable;
 import java.util.List;
